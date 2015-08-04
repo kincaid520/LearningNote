@@ -1,0 +1,10 @@
+import struct
+
+struct.pack
+struct.uppack
+struct.calcsize
+struct.pack_into
+struct.unpack_from
+
+ref:
+http://blog.csdn.net/JGood/article/details/4290158
