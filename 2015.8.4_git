@@ -1,0 +1,2 @@
+git checkout . #recover all files from last committed files
+git checkout <path/filename> #recover specific file from last commited file
