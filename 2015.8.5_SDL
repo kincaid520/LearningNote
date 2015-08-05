@@ -1,0 +1,10 @@
+# now I use these...
+sudo apt-get install libsdl2*
+
+# python use PySDL2.0.9.3
+
+# Website at:
+# https://bitbucket.org/marcusva/py-sdl2/downloads
+
+# I downloaded:
+# https://bitbucket.org/marcusva/py-sdl2/downloads/PySDL2-0.9.3.tar.gz
