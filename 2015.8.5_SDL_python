@@ -1,0 +1,37 @@
+# First SDL program in python
+# -----------------------------------
+
+import sys
+import ctypes
+import sdl2.ext
+
+# RESOURCES: get the image source, "resource" is a folder path
+RESOURCES = sdl2.ext.Resources(__file__, "resource/")
+
+# initial, to get the access to mir server (which control the screen)
+sdl2.ext.init()
+
+# Create a window
+# Setting performance
+window = sdl2.ext.Window("Hello World!", size=(640, 480))
+# Actually build a window
+window.show()
+
+# factory is in order to put the image to sprite
+factory = sdl2.ext.SpriteFactory(sdl2.ext.SOFTWARE)
+# sprite recieve image from factory
+sprite = factory.from_image(RESOURCES.get_path("test.png"))
+
+# spriterenderer is to put the sprite to window
+# setting the performance
+spriterenderer = factory.create_sprite_render_system(window)
+# Actually put to window here
+spriterenderer.render(sprite)
+
+# use a event loop to hold the window
+# setting (maybe?)
+processor = sdl2.ext.TestEventProcessor()
+# Actually run 
+processor.run(window)
+
+
