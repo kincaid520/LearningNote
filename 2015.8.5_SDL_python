@@ -34,4 +34,7 @@ processor = sdl2.ext.TestEventProcessor()
 # Actually run 
 processor.run(window)
 
+# sdl2.ext.TestEventProcessor() will know when the window is closed
 
+# Clear everything when exit
+sdl2.ext.quit()
