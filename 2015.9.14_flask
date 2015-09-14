@@ -1,0 +1,25 @@
+# Write the program
+vim hello.py
+
+# First flask program "hello world!"
+
+from flask import Flask
+app = Flask(__name__)
+
+@app.route("/")
+def hello_world():
+	return "hello world!"
+if __name__ == "__main__":
+	app.run()
+
+# run in virtualenv
+. [NAME OF VIRTUALENV]/vin/activate
+
+# run
+python hello.py
+
+# terminate webserver
+^C
+
+# quit virtualenv
+deactivate
