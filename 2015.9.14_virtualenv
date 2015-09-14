@@ -1,0 +1,11 @@
+# install
+sudo pip install virtualenv
+
+# build with name [NAME]
+virtualenv [NAME]
+
+# run
+. [NAME]/bin/activate
+
+# stop
+deactivate
