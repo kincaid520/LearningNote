@@ -9,7 +9,7 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(4, GPIO.OUT)
 GPIO.output(4, GPIO.HIGH)
 
-DELAY=0.008
+DELAY=0.010
 # 0.015 is too much
 
 port = serial.Serial("/dev/ttyAMA0", baudrate=9600, timeout=1.0")
