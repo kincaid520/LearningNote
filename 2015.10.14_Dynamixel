@@ -1,0 +1,23 @@
+# Delay can't be too long, or short.
+# set Baudrate=9600, Delay=0.008
+
+import serial
+import RPi.GPIO as GPIO
+import time
+
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(4, GPIO.OUT)
+GPIO.output(4, GPIO.HIGH)
+
+DELAY=0.008
+# 0.015 is too much
+
+port = serial.Serial("/dev/ttyAMA0", baudrate=9600, timeout=1.0")
+port.open()
+
+port.write("\xff\xff\x01\x04\x02\x24\x02\xd2")
+time.sleep(DELAY)
+GPIO.output(4,GPIO.LOW)
+response = port.readline()
+print repr( response[-3:-1] )
+port.close()
